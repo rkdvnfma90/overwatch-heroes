@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url('./images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  padding: 100px 0;
+}
+
+.container .heroes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px; /* 700px 이하는 자동으로 줄어듬 */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container .heroes .hero {
+  width: 80px;
+  height: 84px;
+  margin: 4px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  background-color: #555;
+  transform: skewX(-14deg);
+  transition: transform 0.3s, background-color 0.8s;
+}
+
+.container .heroes .hero:hover {
+  background-color: #ff9c00;
+  transform: scale(1.5) skewX(-14deg);
+  z-index: 1;
+}
+
+.container .heroes .hero .image {
+  width: 140%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  transform: skewX(14deg) translateX(-16px);
+}
+
+.container .logo {
+  max-width: 300px;
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0 20px;
+}
+
+.container .logo img {
+  width: 100%;
+}
